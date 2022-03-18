@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spock Rock Game</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Rock Paper Scissors Lizard Spock</h1>
+        </div>
+        <!-- Player Container -->
+        <div class="player-container" id="player">
+            <h2>You - <span id="playerScore"></span><span class="choice" id="playerChoice"></span></h2>
+            <img src="./assets/icon-rock.svg" alt="rock" class='far' title="Rock" id="playerRock" onclick="select('rock')"></img>
+            <img src="./assets/icon-paper.svg" alt="'paper" class="far" title="Paper" id="playerPaper" onclick="select('paper')"></img>
+            <img src="./assets/icon-scissors.svg" alt="scissors" class="far" title="Scissors" id="playerScissors" onclick="select('scissors')"></img>
+            <img src="./assets/icon-lizard.svg" class="far" title="Lizard" id="playerLizard" onclick="select('lizard')"></img>
+            <img src="./assets/icon-spock.svg" class="far" title="Spock" id="playerSpock" onclick="select('spock')"></img>
+        </div>
+        <!-- Computer Container -->
+        <div class="player-container" id="computer">
+            <h2>Computer - <span id="computerScore"></span><span class="choice" id="computerChoice"></span></h2>
+            <img src="./assets/icon-rock.svg" alt="rock" class='far' title="Rock" id="computerRock" onclick="select('rock')"></img>
+            <img src="./assets/icon-paper.svg" alt="'paper" class="far" title="Paper" id="computerPaper" onclick="select('paper')"></img>
+            <img src="./assets/icon-scissors.svg" alt="scissors" class="far" title="Scissors" id="computerScissors" onclick="select('scissors')"></img>
+            <img src="./assets/icon-lizard.svg" class="far" title="Lizard" id="computerLizard" onclick="select('lizard')"></img>
+            <img src="./assets/icon-spock.svg" class="far" title="Spock" id="computerSpock" onclick="select('spock')"></img>
+        </div>
+        <!-- Reset Icon -->
+        <i class="fas fa-sync-alt reset-icon" title="Reset" onclick="resetAll()"></i>
+        <!-- Results Text -->
+        <div class="result-container">
+            <h3 class="result-text" id="resultText"></h3>
+        </div>
+        <!--Rules-->
+        <div class="rules">
+            <!-- Trigger/Open The Modal -->
+            <div class="buttonContainer">
+            <button id="myBtn">Rules</button>
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Rules</h2>
+                </div>
+                <img id="modal-body" src="assets/image-rules-bonus.svg" alt="rules image"/> 
+
+            </div>
+
+            </div>
+        
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js" type="module"></script>
+</body>
+</html>
